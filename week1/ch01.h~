@@ -1,0 +1,11 @@
+#include<unstd.h>
+#include<sys/utsname.h>
+#include<errno.h>
+
+#define err_exit(MESSAGE){
+	perror(MESSAGE),
+	exit(1)
+}
+int gethostname(char *name,size_t size);
+int sethostname(const char *name,size_t length);
+int uname(struct utsname *info);
